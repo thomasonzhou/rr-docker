@@ -14,6 +14,8 @@ docker pull ghcr.io/thomasonzhou/rr-ros2:latest
 - [x] Setup Foxglove
 - [x] Test [rocker](https://github.com/osrf/rocker)
 
+- [ ] Nightly builds
+
 - [ ] Deployment ready Dockerfile
   - [ ] multistage build
   - [ ] rootless
