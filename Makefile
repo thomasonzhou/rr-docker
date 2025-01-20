@@ -1,4 +1,4 @@
-BASE_ROS2_IMAGE=osrf/ros:jazzy-desktop-full
+BASE_ROS2_IMAGE=ros:jazzy-ros-core
 OUTPUT_ROS2_IMAGE=ros2-reazon:latest
 ROS2_DOCKERFILE=ros2.Dockerfile
 
@@ -10,5 +10,3 @@ build-ros2:
 run-ros2:
 	@echo "Running Docker image $(OUTPUT_ROS2_IMAGE)..."
 	docker run --interactive --tty --rm $(OUTPUT_ROS2_IMAGE)
-
-.PHONY: build-ros2 run-ros2
