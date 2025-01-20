@@ -4,6 +4,9 @@ on:
     push:
     workflow_dispatch:
 
+env:
+    GHCR_REPO: ghcr.io/thomasonzhou/rr-ros2
+
 jobs:
     build:
         runs-on: ubuntu-latest
@@ -21,6 +24,8 @@ jobs:
               run: |
                   echo "version=${GITHUB_REF#refs/tags/v}" >> $GITHUB_OUTPUT
                   echo "platform=$(echo -n ${{ matrix.platform }} | sed 's/\//-/g')" >> $GITHUB_OUTPUT
+                  BRANCH_NAME=$(echo "${GITHUB_REF#refs/heads/}")
+                  echo "tag=ghcr.io/username/myrepo:${BRANCH_NAME}-linux-arm64" >> $GITHUB_OUTPUT
 
             - uses: actions/checkout@v3
             - uses: docker/setup-qemu-action@v2

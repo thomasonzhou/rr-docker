@@ -17,3 +17,4 @@ docker pull ghcr.io/thomasonzhou/rr-ros2:latest
 - [ ] Deployment ready Dockerfile
   - [ ] multistage build
   - [ ] rootless
+  - [ ] build in separate github genvironment
