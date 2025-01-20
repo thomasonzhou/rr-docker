@@ -13,6 +13,4 @@ docker pull ghcr.io/thomasonzhou/rr-ros2:latest
 
 - [x] Setup ROS2 Jazzy
 - [x] Setup Foxglove
-- [ ] Setup Gazebo Harmonic
-
-- [ ] Setup [rocker](https://github.com/osrf/rocker)
+- [x] Test [rocker](https://github.com/osrf/rocker)
