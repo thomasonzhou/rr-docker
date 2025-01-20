@@ -6,7 +6,8 @@ on:
 
 env:
     REGISTRY_IMAGE: ghcr.io/thomasonzhou/rr-ros2
-    DOCKERFILE_NAME: ros2.Dockerfile
+    BASE_ROS2_IMAGE: ros:jazzy-ros-core
+    ROS2_DOCKERFILE: ros2.Dockerfile
 
 jobs:
     build:
@@ -51,7 +52,9 @@ jobs:
               uses: docker/build-push-action@v5
               with:
                   context: .
-                  file: ${{ env.DOCKERFILE_NAME }}
+                  file: ${{ env.ROS2_DOCKERFILE }}
+                  build-args: BASE_ROS2_IMAGE=${{env.BASE_ROS2_IMAGE}}
+                      OUTPUT_ROS2_IMAGE=${{env.OUTPUT_ROS2_IMAGE}}
                   platforms: ${{ matrix.platform }}
                   labels: ${{ steps.meta.outputs.labels }}
                   outputs: type=image,name=${{ env.REGISTRY_IMAGE }},push-by-digest=true,name-canonical=true,push=true
