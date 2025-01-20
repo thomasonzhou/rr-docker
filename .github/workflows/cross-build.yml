@@ -16,12 +16,8 @@ jobs:
             matrix:
                 include:
                     - platform: linux/amd64
-                      # runner: ubuntu-latest
                     - platform: linux/arm64
-                      # runner: ubuntu-22.04-2core-arm64
-        runs-on:
-            ubuntu-latest
-            # ${{ matrix.runner }}
+        runs-on: ubuntu-latest
         steps:
             - name: Prepare
               run: |
@@ -53,11 +49,11 @@ jobs:
               with:
                   context: .
                   file: ${{ env.ROS2_DOCKERFILE }}
-                  build-args: BASE_ROS2_IMAGE=${{env.BASE_ROS2_IMAGE}}
-                      OUTPUT_ROS2_IMAGE=${{env.OUTPUT_ROS2_IMAGE}}
+                  build-args: |
+                      "BASE_ROS2_IMAGE=${{ env.BASE_ROS2_IMAGE }}"
                   platforms: ${{ matrix.platform }}
                   labels: ${{ steps.meta.outputs.labels }}
-                  outputs: type=image,name=${{ env.REGISTRY_IMAGE }},push-by-digest=true,name-canonical=true,push=true
+                  outputs: "type=image,name=${{ env.REGISTRY_IMAGE }},push-by-digest=true,name-canonical=true,push=true"
 
             - name: Export digest
               run: |
