@@ -8,7 +8,7 @@ build-ros2:
 	--tag $(OUTPUT_ROS2_IMAGE) \
 	--file $(ROS2_DOCKERFILE) \
 	--push \
-	--platform linux/arm64/v8,linux/amd64 \
+	--platform linux/arm64,linux/amd64 \
 	. \
 	--build-arg BASE_ROS2_IMAGE=$(BASE_ROS2_IMAGE)
 
