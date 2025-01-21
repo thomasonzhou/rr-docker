@@ -1,6 +1,6 @@
 BASE_ROS2_IMAGE=osrf/ros:jazzy-desktop-full
 OUTPUT_ROS2_IMAGE=ghcr.io/thomasonzhou/rr-ros2
-ROS2_DOCKERFILE=ros2-jazzy.Dockerfile
+ROS2_DOCKERFILE=ros2.Dockerfile
 
 build-ros2:
 	@echo "Building Docker image $(OUTPUT_ROS2_IMAGE)..."
