@@ -6,7 +6,7 @@ on:
 
 env:
     REGISTRY_IMAGE: ghcr.io/thomasonzhou/rr-ros2
-    BASE_ROS2_IMAGE: ros:jazzy-ros-core
+    BASE_ROS2_IMAGE: osrf/ros:jazzy-desktop-full
     ROS2_DOCKERFILE: ros2.Dockerfile
 
 jobs:

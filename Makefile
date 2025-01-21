@@ -1,4 +1,4 @@
-BASE_ROS2_IMAGE=ros:jazzy-ros-core
+BASE_ROS2_IMAGE=osrf/ros:jazzy-desktop-full
 OUTPUT_ROS2_IMAGE=ghcr.io/thomasonzhou/rr-ros2
 ROS2_DOCKERFILE=ros2-jazzy.Dockerfile
 
