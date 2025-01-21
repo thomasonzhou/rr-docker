@@ -14,9 +14,11 @@ docker pull ghcr.io/thomasonzhou/rr-ros2:latest
 - [x] Setup Foxglove
 - [x] Test [rocker](https://github.com/osrf/rocker)
 
+- [x] Genesis docker image
+
 - [ ] Nightly builds
 
-- [ ] Deployment ready Dockerfile
+- [ ] Deployment ready Dockerfiles
   - [ ] multistage build
   - [ ] rootless
   - [ ] build in separate github genvironment
