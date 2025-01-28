@@ -1,3 +1,9 @@
+# Purpose
+
+- X11 forwarding: use GUIs with docker
+- User home copy: use the same directories inside and outside the container
+- NVIDIA GPU support
+
 # Usage 
 
 1. [Install Docker](https://docs.docker.com/engine/install/)
