@@ -1,12 +1,14 @@
 # Usage 
 
-[Install Docker for your system.](https://docs.docker.com/engine/install/)
+1. [Install Docker](https://docs.docker.com/engine/install/)
 
-Pull the latest version of the ros2 image. This is a *development* image, an image optimized for deployment will be added later.
+2. [Install uv](https://docs.astral.sh/uv/getting-started/installation/)
 
+3. Run start.py using uv
 ```sh
-docker pull ghcr.io/thomasonzhou/rr-ros2:latest
+uv run start.py
 ```
+If you have an NVIDIA GPU, [make sure drivers are installed](https://ubuntu.com/server/docs/nvidia-drivers-installation), and uncomment out the arguments "--nvidia auto".
 
 # TODO
 
