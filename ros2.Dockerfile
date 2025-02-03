@@ -9,12 +9,17 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     ros-jazzy-foxglove-bridge \
     ros-jazzy-tf2-ros \
     python3-colcon-common-extensions \ 
+    python3-colcon-mixin \
+    python3-rosdep \
     build-essential \ 
     ros-jazzy-xacro \
     ros-jazzy-ros-gz \
+    ~nros-jazzy-rqt* \
+    python3-vcstool \
     vim \
     curl \
     ca-certificates \
-    wget
+    wget \
+    ninja-build
 
 COPY --from=ghcr.io/astral-sh/uv:latest /uv /uvx /bin/

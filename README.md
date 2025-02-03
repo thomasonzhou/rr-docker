@@ -22,7 +22,7 @@ If you have an NVIDIA GPU, [make sure drivers are installed](https://ubuntu.com/
 - [x] Setup Foxglove
 - [x] Test [rocker](https://github.com/osrf/rocker)
 
-- [x] Genesis docker image
+- [ ] Add CUDA
 
 - [ ] Nightly builds
 
